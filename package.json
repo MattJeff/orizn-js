@@ -1,0 +1,37 @@
+{
+  "name": "orizn",
+  "version": "1.0.0",
+  "description": "Official SDK for the Orizn Visa API — 39,585 passport-destination pairs in 15 languages",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "visa", "travel", "passport", "api", "sdk",
+    "visa-requirements", "travel-api", "orizn",
+    "immigration", "country-data", "multilingual"
+  ],
+  "author": "Orizn <api@orizn.app>",
+  "license": "MIT",
+  "homepage": "https://visa.orizn.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattJeff/orizn-js"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
