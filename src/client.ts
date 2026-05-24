@@ -23,10 +23,21 @@ export class Orizn {
   private baseUrl: string;
   private timeout: number;
 
+  private static _hinted = false;
+
   constructor(config: OriznConfig = {}) {
     this.apiKey = config.apiKey ?? process.env.ORIZN_API_KEY;
     this.baseUrl = config.baseUrl ?? DEFAULT_BASE_URL;
     this.timeout = config.timeout ?? DEFAULT_TIMEOUT;
+
+    if (!this.apiKey && !Orizn._hinted) {
+      Orizn._hinted = true;
+      console.warn(
+        "[orizn] No API key found. Free mode: quick checks only.\n" +
+        "[orizn] Get your free key → https://visa.orizn.app\n" +
+        "[orizn] Then pass it: new Orizn({ apiKey: \"orizn_visa_...\" })"
+      );
+    }
   }
 
   async getVisa(
