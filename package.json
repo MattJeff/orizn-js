@@ -1,7 +1,7 @@
 {
   "name": "orizn",
-  "version": "1.0.1",
-  "description": "Official SDK for the Orizn Visa API — 39,585 passport-destination pairs in 15 languages",
+  "version": "1.1.0",
+  "description": "Official SDK for the Orizn Visa API — 39,585 passport-destination pairs in 15 languages, with 32 data points per visa (fees, processing, photo specs, transit, embassies, overstay penalties, safety)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
